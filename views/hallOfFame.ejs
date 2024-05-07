@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall of Fame</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+
+<body style="min-height: 100vh; background-color: rgba(253, 146, 146, 0.781);">
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+
+                <div class="column has-text-centered">
+                    <h1 id="winName">Winner</h1>
+                        <ul>
+                            <% topWinners.forEach((winner, index) => { %>
+                                <li> <%= winner.winName %> </li>
+                            <% }); %>
+                        </ul>
+                </div>
+
+                <div class="column has-text-centered">
+                    <h1 id="winTotal">Final Score</h1>
+                        <ul>
+                            <% topWinners.forEach((winner, index) => { %>
+                                <li> <%= winner.winTotal %> points</li>
+                            <% }); %>
+                        </ul>
+                </div>
+
+                <div class="column has-text-centered">
+                    <h1 id="hiWord">Highest Scoring Word</h1>
+                        <ul>
+                            <% topWinners.forEach((winner, index) => { %>
+                                <li> <%= winner.hiWord.toUpperCase() %>  </li>
+                            <% }); %>
+                        </ul>
+                </div>
+
+                <div class="column has-text-centered">
+                    <h1 id="hiTotal">Highest Scoring Word Total</h1>
+                        <ul>
+                            <% topWinners.forEach((winner, index) => { %>
+                                <li> <%= winner.hiTotal %> points </li>
+                            <% }); %>
+                        </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="newgame" class=" columns is-centered">
+            <a href="/scrabble" style="font-size: 3em">New Game?</a>
+        </div>
+    </section>
+</body>
+
+</html>

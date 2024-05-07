@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/app.css">
+</head>
+
+<body style="background-color: rgba(253, 146, 146, 0.781);">
+<section class="section">
+    <div class="container">
+    <div class="columns">
+
+      <div class="column has-text-right">
+        <ul id="p1Words"></ul>
+      </div>
+
+        <div class="column is-half">
+            <div class="card">
+              
+                <div class="card-image">
+                    <figure class="image is-3by1">
+                        <img src="../media/Scrabble_art.jpg" alt="">
+                    </figure>
+                </div>
+
+                <header class="card-header">
+                  <div class="card-header-title" id="header">
+                    Scrabble Score Keeper
+                  </div>
+                </header>
+
+                <div class="card-content">
+                  <div class="content">
+                    <h1 class="title is-1 has-text-centered"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+                  <div class="columns is-centered">
+                    <input type="number" id="pScore" placeholder="Points Scored">
+                    <input type="text" id="wordPlayed" placeholder="Word Played">
+                  </div>
+                </div>
+
+                <footer class="card-footer">
+                    <button id="p1Button" class="is-primary card-footer-item button is-medium">Madison</button>
+                    <button id="p2Button" class="is-info button card-footer-item is-medium">Jacob</button>
+                    <button id="victoryLap" class="is-danger button card-footer-item is-medium">End Game</button>  
+                </footer>
+
+                <div>
+                  <h2 class="has-text-centered">Two Letter Words</h2>
+                    <ul class="has-text-centered">
+                      <li>AA, AB, AD, AE, AG, AH, AI, AL, AM, AN, AR, AS, AT, <br> AW, AX, AY, 
+                        BA, BE, BI, BO, BY,
+                        DA, DE, DO,<br>
+                        ED, EF, EH, EL, EM, EN, ER, ES, ET, EW, EX,
+                        FA, FE,<br>
+                        GI, GO,
+                        HA, HE, HI, HM, HO,
+                        ID, IF, IN, IS, IT,
+                        JO,
+                        KA, KI,<br>
+                        LA, LI, LO,
+                        MA, ME, MI, MM, MO, MU, MY,
+                        NA, NE, NO, <br> NU,
+                        OD, OE, OF, OH, OI, OK, OM, ON, OP, OR, OS, OW,<br> OX, OY,
+                        PA, PE, PI, PO,
+                        QI,
+                        RE,
+                        SH, SI, SO,
+                        TA, TE, TI, TO,<br>
+                        UH, UM, UN, UP, US, UT,
+                        WE, WO,
+                        XI, XU,
+                        YA, YE, YO,
+                        ZA</li>
+                    </ul>
+                  </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="column has-text-left">
+          <ul id="p2Words"></ul>
+        </div>
+
+    </div>
+
+  <div class="columns is-centered">
+    <a style="font-size: 3em" href="/hallOfFame">Hall of Fame</a>
+  </div>
+</section>
+
+<script src="../public/script.js"></script>
+
+</body>
+</html>
